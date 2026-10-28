@@ -1,0 +1,3 @@
+add_executable(exotic_memory_demo memory_demo.cpp)
+target_link_libraries(exotic_memory_demo PRIVATE exotic::exotic)
+exotic_set_warnings(exotic_memory_demo)

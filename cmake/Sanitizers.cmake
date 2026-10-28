@@ -1,0 +1,6 @@
+function(exotic_enable_sanitizers target)
+    if (NOT EXOTIC_SANITIZER STREQUAL "")
+        target_compile_options(${target} PRIVATE -fsanitize=${EXOTIC_SANITIZER} -fno-omit-frame-pointer -g)
+        target_link_options(${target} PRIVATE -fsanitize=${EXOTIC_SANITIZER})
+    endif()
+endfunction()
